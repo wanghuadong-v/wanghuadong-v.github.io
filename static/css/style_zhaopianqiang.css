@@ -1,6 +1,7 @@
 @import url('reset_zhaopianqiang.css');
 body{
-	background:#f7f7f7 url(https://m1.im5i.com/2021/11/17/UnThOa.gif) repeat top left;
+	/*background:#f7f7f7 url(https://m1.im5i.com/2021/11/17/UnThOa.gif) repeat top left;*/
+	background-color: wheat;
 	color:#000;
 	font-family: Georgia, "Times New Roman",sans-serif;
 	font-size:12px;
