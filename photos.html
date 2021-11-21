@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>每一张都很美</title>
+    <title>记录</title>
     <meta charset="UTF-8"/>
     <meta name="description" content="Image Wall with jQuery and CSS3"/>
     <meta name="keywords" content="jquery, css3, images, wall, thumbnails, slide, animate"/>
     <meta name="author" content="Codrops"/>
     <link rel="stylesheet" type="text/css" href="static/css/style_zhaopianqiang.css"/>
+    <link rel="stylesheet" type="text/css"  href="static/css/base_bofangqi.css">
     <style>
         /* cyrillic-ext */
         @font-face {
@@ -60,6 +61,9 @@
         <h1>A silent world</h1>
         <!-- <span>Image Wall with jQuery and CSS3</span> -->
     </header>
+    <div style="position: absolute;bottom: 40px;right: 40px">
+        <audio  controls height="100" width="100" id="audio-my" src="static/sound/m1.mp3" preload="metadata"></audio>
+    </div>
     <div class="iw_wrapper">
         <ul class="iw_thumbs" id="iw_thumbs">
             <li><img src="static/img/first.jpg"
@@ -79,13 +83,13 @@
             </li>
             <li><img src="static/img/toupai.jpg"
                      data-img="static/img/toupai.jpg"/>
-                <div><h2>偷拍</h2>
+                <div><h2>背影</h2>
                     <p>第一次见面偷拍的，<br>她说很好看，<br>但是以后不让拍了，<br>哈哈</p></div>
             </li>
             <li><img src="static/img/wenrou.jpg"
                      data-img="static/img/wenrou.jpg"/>
                 <div><h2>温柔</h2>
-                    <p>这张图片她问我温柔吗，<br>当然温柔啊，<br>上一秒还温柔的跟我说滚犊子呢,<br>hahaha</p></div>
+                    <p>这张图片她问我温柔吗，<br>当然温柔啊，<br>上一秒还温柔地跟我说滚犊子呢</p></div>
             </li>
             <li><img src="static/img/yeah.jpg"
                      data-img="static/img/yeah.jpg"/>
@@ -95,17 +99,17 @@
             <li><img src="static/img/如花.jpg"
                      data-img="static/img/如花.jpg"/>
                 <div><h2>如花</h2>
-                    <p>我叫如花，<br>我就是一朵花~</p></div>
+                    <p>我叫如花<br>我就是一朵花~</p></div>
             </li>
             <li><img src="static/img/beauty.jpg"
                      data-img="static/img/beauty.jpg"/>
                 <div><h2>beauty</h2>
-                    <p>美颜加滤镜，<br>就是一顿拍</p></div>
+                    <p>美颜加滤镜<br>就是一顿拍</p></div>
             </li>
             <li><img src="static/img/直发.jpg"
                      data-img="static/img/直发.jpg"/>
                 <div><h2>直发</h2>
-                    <p>初见是卷发，<br>直发也很美</p></div>
+                    <p>初见是卷发<br>直发也很美</p></div>
             </li>
             <li><img src="static/img/真冷.jpg"
                      data-img="static/img/真冷.jpg"/>
