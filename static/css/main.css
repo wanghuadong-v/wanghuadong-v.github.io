@@ -1,0 +1,18 @@
+.text-flowLight {
+    position:relative;
+    background-image:-webkit-linear-gradient(left,#1A3375,#b2c8ff,#1A3375 100%);
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip:text;
+    -webkit-background-size:200% 100%;
+    -webkit-animation:masked-animation 5s forwards linear infinite;
+    font-weight:700;
+    white-space:nowrap
+}
+@keyframes masked-animation {
+    from {
+        background-position:0 0
+    }
+    to {
+        background-position:-200% 0
+    }
+}
