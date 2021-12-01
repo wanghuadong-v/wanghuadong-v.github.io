@@ -8,14 +8,435 @@
     <meta name="author" content="Codrops"/>
     <link rel="stylesheet" type="text/css" href="static/css/style_zhaopianqiang.css"/>
     <link rel="stylesheet" type="text/css"  href="static/css/base_bofangqi.css">
+    <style>
+        /* cyrillic-ext */
+        @font-face {
+            font-family: 'PT Sans Narrow';
+            font-style: normal;
+            font-weight: 400;
+            src: url(https://fonts.gstatic.com/s/ptsansnarrow/v12/BngRUXNadjH0qYEzV7ab-oWlsbCLwR26eg.woff2) format('woff2');
+            unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+        }
+
+        /* cyrillic */
+        @font-face {
+            font-family: 'PT Sans Narrow';
+            font-style: normal;
+            font-weight: 400;
+            src: url(https://fonts.gstatic.com/s/ptsansnarrow/v12/BngRUXNadjH0qYEzV7ab-oWlsbCCwR26eg.woff2) format('woff2');
+            unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'PT Sans Narrow';
+            font-style: normal;
+            font-weight: 400;
+            src: url(https://fonts.gstatic.com/s/ptsansnarrow/v12/BngRUXNadjH0qYEzV7ab-oWlsbCIwR26eg.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'PT Sans Narrow';
+            font-style: normal;
+            font-weight: 400;
+            src: url(https://fonts.gstatic.com/s/ptsansnarrow/v12/BngRUXNadjH0qYEzV7ab-oWlsbCGwR0.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Wire One';
+            font-style: normal;
+            font-weight: 400;
+            src: url(https://fonts.gstatic.com/s/wireone/v13/qFdH35Wah5htUhV75VGlU9s.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+    </style>
 </head>
 <body>
-<h1>nibupei</h1>
+<div class="content">
+    <header>
+        <h1>
+            <svg t="1637908128362" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2780" width="128" height="128"><path d="M133 909.5c0-24.6 169.7-44.5 379-44.5s379 19.9 379 44.5S721.3 954 512 954s-379-19.9-379-44.5z" fill="#EDEDEE" p-id="2781"></path><path d="M444.9 224.7c192.4-35.8 377.4 91.2 413.2 283.6L800 519.1c-29.8-160.4-184-266.2-344.4-236.3-160.4 29.8-266.2 184-236.3 344.4l-58 10.8c-35.8-192.5 91.2-377.5 283.6-413.3z" fill="#7CD0A4" p-id="2782"></path><path d="M455.7 282.8c160.4-29.8 314.5 76 344.4 236.3L742 529.9C718.2 401.6 594.8 317 466.5 340.8 338.2 364.7 253.6 488 277.4 616.3l-58.1 10.8c-29.7-160.3 76.1-314.5 236.4-344.3z" fill="#FED572" p-id="2783"></path><path d="M466.5 340.8C594.8 317 718.2 401.6 742 529.9l-58 10.8C666.1 444.5 573.6 381 477.3 398.9c-96.2 17.9-159.7 110.4-141.8 206.6l-58.1 10.8c-23.8-128.2 60.9-251.6 189.1-275.5z" fill="#FC7968" p-id="2784"></path><path d="M477.3 398.9C573.6 381 666.1 444.5 684 540.7l-58.1 10.8C614 487.4 552.3 445.1 488.1 457c-64.1 11.9-106.5 73.6-94.5 137.7l-58.1 10.8c-17.9-96.2 45.6-188.7 141.8-206.6z" fill="#63A3FB" p-id="2785"></path><path d="M294.5 502c29.3 0 53.7 20.8 59.4 48.4l0.4 3.6 2.7-0.3c35.9 0 65 29.1 65 65.1 0 36-29.1 65.1-65 65.1-3.9 0-7.8-0.3-11.5-1l-3.4 4.1c-11.8 11.8-28 19.1-46 19.1-9 0-17.5-1.8-25.3-5.1l-7.7-4.2-2.8 3.4c-11 11-26.1 17.8-42.9 17.8s-31.9-6.8-42.9-17.8l-7.2-8.7-7.7 3c-5.7 1.8-11.7 2.7-18 2.7-33.5 0-60.6-27.2-60.6-60.7s27.1-60.7 60.6-60.7c4.2 0 8.3 0.4 12.2 1.2l5.8 1.8 1.8-5.9c9.2-21.8 30.7-37 55.9-37 4.2 0 8.3 0.4 12.2 1.2l8.8 2.7 0.3-1c9.3-21.5 30.8-36.8 55.9-36.8zM729.5 419c-29.3 0-53.7 20.8-59.4 48.4l-0.4 3.6-2.7-0.3c-35.9 0-65 29.1-65 65.1 0 36 29.1 65.1 65 65.1 3.9 0 7.8-0.3 11.5-1l3.4 4.1c11.8 11.8 28 19.1 46 19.1 9 0 17.5-1.8 25.3-5.1l7.7-4.2 2.8 3.4c11 11 26.1 17.8 42.9 17.8 16.7 0 31.9-6.8 42.9-17.8l7.2-8.7 7.7 3c5.7 1.8 11.7 2.7 18 2.7 33.5 0 60.6-27.2 60.6-60.7S915.9 493 882.4 493c-4.2 0-8.3 0.4-12.2 1.2l-5.8 1.8-1.8-5.9c-9.2-21.8-30.7-37-55.8-37-4.2 0-8.3 0.4-12.2 1.2l-8.8 2.7-0.3-1c-9.4-21.7-30.9-37-56-37z" fill="#A3DFFD" p-id="2786"></path></svg>
+            A silent world
+        </h1>
+        <!-- <span>Image Wall with jQuery and CSS3</span> -->
+    </header>
+    <div style="position: absolute;top: 40px;right: 40px">
+        <audio  controls height="100" width="100" id="audio-my" src="static/sound/River%20Flows%20In%20You%20Cover郑成河.mp3" preload="metadata"></audio>
+    </div>
+    <div class="iw_wrapper">
+        <ul class="iw_thumbs" id="iw_thumbs">
+            <li><img src="static/img/first.jpg"
+                     data-img="static/img/first.jpg"/>
+                <div><h2>第一印象</h2>
+                    <p>保存的第一张照片，<br>感觉跟本人一点也不像</p></div>
+            </li>
+            <li><img src="static/img/xiaohai.jpg"
+                     data-img="static/img/xiaohai.jpg"/>
+                <div><h2>beauty</h2>
+                    <p>有时感觉她像小孩，<br>有时感觉像大人，<br>这张就很像小孩</p></div>
+            </li>
+            <li><img src="https://m1.im5i.com/2021/11/17/UnkfAA.jpg"
+                     data-img="https://m1.im5i.com/2021/11/17/UnkfAA.jpg"/>
+                <div><h2>beauty</h2>
+                    <p>有时感觉她像小孩，<br>有时感觉像大人，<br>这张就很像大人</p></div>
+            </li>
+            <li><img src="static/img/toupai.jpg"
+                     data-img="static/img/toupai.jpg"/>
+                <div><h2>背影</h2>
+                    <p>第一次见面偷拍的，<br>她说很好看，<br>但是以后不让拍了，<br>哈哈</p></div>
+            </li>
+            <li><img src="static/img/wenrou.jpg"
+                     data-img="static/img/wenrou.jpg"/>
+                <div><h2>温柔</h2>
+                    <p>这张图片她问我温柔吗，<br>当然温柔啊，<br>上一秒还温柔地跟我说滚犊子呢</p></div>
+            </li>
+            <li><img src="static/img/yeah.jpg"
+                     data-img="static/img/yeah.jpg"/>
+                <div><h2>耶</h2>
+                    <p>第一次听说还有唇膜这个东西~</p></div>
+            </li>
+            <li><img src="static/img/如花.jpg"
+                     data-img="static/img/如花.jpg"/>
+                <div><h2>如花</h2>
+                    <p>我叫如花<br>我就是一朵花~</p></div>
+            </li>
+            <li><img src="static/img/beauty.jpg"
+                     data-img="static/img/beauty.jpg"/>
+                <div><h2>beauty</h2>
+                    <p>美颜加滤镜<br>就是一顿拍</p></div>
+            </li>
+            <li><img src="static/img/直发.jpg"
+                     data-img="static/img/直发.jpg"/>
+                <div><h2>直发</h2>
+                    <p>初见是卷发<br>直发也很美</p></div>
+            </li>
+            <li><img src="static/img/真冷.jpg"
+                     data-img="static/img/真冷.jpg"/>
+                <div><h2>真冷</h2>
+                    <p>2021年的秋天来的有些突然</p></div>
+            </li>
+            <li><img src="static/img/通话.jpg"
+                     data-img="static/img/通话.jpg"/>
+                <div><h2>通话</h2>
+                    <p>第一次长通话<br>海风、海浪<br>我喝醉了有点晕<br>她的声音很温柔</p></div>
+            </li>
+            <li><img src="static/img/最右.jpg"
+                     data-img="static/img/最右.jpg"/>
+                <div><h2>最右</h2>
+                    <p>最右头像<br>那是她的树洞<br>我就不应该关注</p></div>
+            </li>
+            <li><img src="static/img/yeah_2.jpg"
+                     data-img="static/img/yeah_2.jpg"/>
+                <div><h2>yeah</h2>
+                    <p>虹姐虹姐<br>来张自拍<br></p></div>
+            </li>
+    </div>
+    <div id="iw_ribbon" class="iw_ribbon">
+        <span class="iw_close"></span>
+        <span class="iw_zoom">Click thumb to zoom</span>
+    </div>
+</div>
 <script type="text/javascript" src="static/js/jquery.min1_6.js"></script>
 <script type="text/javascript" src="static/js/jquery.masonry.min.js"></script>
 <script type="text/javascript" src="static/js/jquery.easing.1.3.js"></script>
 <script type="text/javascript">
+    $(window).load(function () {
+        var $iw_thumbs = $('#iw_thumbs'),
+            $iw_ribbon = $('#iw_ribbon'),
+            $iw_ribbon_close = $iw_ribbon.children('span.iw_close'),
+            $iw_ribbon_zoom = $iw_ribbon.children('span.iw_zoom');
 
+        ImageWall = (function () {
+            // window width and height
+            var w_dim,
+                // index of current image
+                current = -1,
+                isRibbonShown = false,
+                isFullMode = false,
+                // ribbon / images animation settings
+                ribbonAnim = {speed: 500, easing: 'easeOutExpo'},
+                imgAnim = {speed: 400, easing: 'jswing'},
+                // init function : call masonry, calculate window dimentions, initialize some events
+                init = function () {
+                    $iw_thumbs.imagesLoaded(function () {
+                        $iw_thumbs.masonry({
+                            isAnimated: true
+                        });
+                    });
+                    getWindowsDim();
+                    initEventsHandler();
+                },
+                // calculate window dimentions
+                getWindowsDim = function () {
+                    w_dim = {
+                        width: $(window).width(),
+                        height: $(window).height()
+                    };
+                },
+                // initialize some events
+                initEventsHandler = function () {
+
+                    // click on a image
+                    $iw_thumbs.delegate('li', 'click', function () {
+                        if ($iw_ribbon.is(':animated')) return false;
+
+                        var $el = $(this);
+
+                        if ($el.data('ribbon')) {
+                            showFullImage($el);
+                        } else if (!isRibbonShown) {
+                            isRibbonShown = true;
+
+                            $el.data('ribbon', true);
+
+                            // set the current
+                            current = $el.index();
+
+                            showRibbon($el);
+                        }
+                    });
+
+                    // click ribbon close
+                    $iw_ribbon_close.bind('click', closeRibbon);
+
+                    // on window resize we need to recalculate the window dimentions
+                    $(window).bind('resize', function () {
+                        getWindowsDim();
+                        if ($iw_ribbon.is(':animated'))
+                            return false;
+                        closeRibbon();
+                    })
+                        .bind('scroll', function () {
+                            if ($iw_ribbon.is(':animated'))
+                                return false;
+                            closeRibbon();
+                        });
+
+                },
+                showRibbon = function ($el) {
+                    var $img = $el.children('img'),
+                        $descrp = $img.next();
+
+                    // fadeOut all the other images
+                    $iw_thumbs.children('li').not($el).animate({opacity: 0.2}, imgAnim.speed);
+
+                    // increase the image z-index, and set the height to 100px (default height)
+                    $img.css('z-index', 100)
+                        .data('originalHeight', $img.height())
+                        .stop()
+                        .animate({
+                            height: '100px'
+                        }, imgAnim.speed, imgAnim.easing);
+
+                    // the ribbon will animate from the left or right
+                    // depending on the position of the image
+                    var ribbonCssParam = {
+                            top: $el.offset().top - $(window).scrollTop() - 6 + 'px'
+                        },
+                        descriptionCssParam,
+                        dir;
+
+                    if ($el.offset().left < (w_dim.width / 2)) {
+                        dir = 'left';
+                        ribbonCssParam.left = 0;
+                        ribbonCssParam.right = 'auto';
+                    } else {
+                        dir = 'right';
+                        ribbonCssParam.right = 0;
+                        ribbonCssParam.left = 'auto';
+                    }
+
+                    $iw_ribbon.css(ribbonCssParam)
+                        .show()
+                        .stop()
+                        .animate({width: '100%'}, ribbonAnim.speed, ribbonAnim.easing, function () {
+                            switch (dir) {
+                                case 'left' :
+                                    descriptionCssParam = {
+                                        'left': $img.outerWidth(true) + 'px',
+                                        'text-align': 'left'
+                                    };
+                                    break;
+                                case 'right' :
+                                    descriptionCssParam = {
+                                        'left': '-200px',
+                                        'text-align': 'right'
+                                    };
+                                    break;
+                            }
+                            ;
+                            $descrp.css(descriptionCssParam).fadeIn();
+                            // show close button and zoom
+                            $iw_ribbon_close.show();
+                            $iw_ribbon_zoom.show();
+                        });
+
+                },
+                // close the ribbon
+                // when in full mode slides in the middle of the page
+                // when not slides left
+                closeRibbon = function () {
+                    isRibbonShown = false
+
+                    $iw_ribbon_close.hide();
+                    $iw_ribbon_zoom.hide();
+
+                    if (!isFullMode) {
+
+                        // current wall image
+                        var $el = $iw_thumbs.children('li').eq(current);
+
+                        resetWall($el);
+
+                        // slide out ribbon
+                        $iw_ribbon.stop()
+                            .animate({width: '0%'}, ribbonAnim.speed, ribbonAnim.easing);
+
+                    } else {
+                        $iw_ribbon.stop().animate({
+                            opacity: 0.8,
+                            height: '0px',
+                            marginTop: w_dim.height / 2 + 'px' // half of window height
+                        }, ribbonAnim.speed, function () {
+                            $iw_ribbon.css({
+                                'width': '0%',
+                                'height': '126px',
+                                'margin-top': '0px'
+                            }).children('img').remove();
+                        });
+
+                        isFullMode = false;
+                    }
+                },
+                resetWall = function ($el) {
+                    var $img = $el.children('img'),
+                        $descrp = $img.next();
+
+                    $el.data('ribbon', false);
+
+                    // reset the image z-index and height
+                    $img.css('z-index', 1).stop().animate({
+                        height: $img.data('originalHeight')
+                    }, imgAnim.speed, imgAnim.easing);
+
+                    // fadeOut the description
+                    $descrp.fadeOut();
+
+                    // fadeIn all the other images
+                    $iw_thumbs.children('li').not($el).animate({opacity: 1}, imgAnim.speed);
+                },
+                showFullImage = function ($el) {
+                    isFullMode = true;
+
+                    $iw_ribbon_close.hide();
+
+                    var $img = $el.children('img'),
+                        large = $img.data('img'),
+
+                        // add a loading image on top of the image
+                        $loading = $('<span class="iw_loading"></span>');
+
+                    $el.append($loading);
+
+                    // preload large image
+                    $('<img/>').load(function () {
+                        var $largeImage = $(this);
+
+                        $loading.remove();
+
+                        $iw_ribbon_zoom.hide();
+
+                        resizeImage($largeImage);
+
+                        // reset the current image in the wall
+                        resetWall($el);
+
+                        // animate ribbon in and out
+                        $iw_ribbon.stop().animate({
+                            opacity: 1,
+                            height: '0px',
+                            marginTop: '63px' // half of ribbons height
+                        }, ribbonAnim.speed, function () {
+                            // add the large image to the DOM
+                            $iw_ribbon.prepend($largeImage);
+
+                            $iw_ribbon_close.show();
+
+                            $iw_ribbon.animate({
+                                height: '100%',
+                                marginTop: '0px',
+                                top: '0px'
+                            }, ribbonAnim.speed);
+                        });
+                    }).attr('src', large);
+
+                },
+                resizeImage = function ($image) {
+                    var widthMargin = 100,
+                        heightMargin = 100,
+
+                        windowH = w_dim.height - heightMargin,
+                        windowW = w_dim.width - widthMargin,
+                        theImage = new Image();
+
+                    theImage.src = $image.attr("src");
+
+                    var imgwidth = theImage.width,
+                        imgheight = theImage.height;
+
+                    if ((imgwidth > windowW) || (imgheight > windowH)) {
+                        if (imgwidth > imgheight) {
+                            var newwidth = windowW,
+                                ratio = imgwidth / windowW,
+                                newheight = imgheight / ratio;
+
+                            theImage.height = newheight;
+                            theImage.width = newwidth;
+
+                            if (newheight > windowH) {
+                                var newnewheight = windowH,
+                                    newratio = newheight / windowH,
+                                    newnewwidth = newwidth / newratio;
+
+                                theImage.width = newnewwidth;
+                                theImage.height = newnewheight;
+                            }
+                        } else {
+                            var newheight = windowH,
+                                ratio = imgheight / windowH,
+                                newwidth = imgwidth / ratio;
+
+                            theImage.height = newheight;
+                            theImage.width = newwidth;
+
+                            if (newwidth > windowW) {
+                                var newnewwidth = windowW,
+                                    newratio = newwidth / windowW,
+                                    newnewheight = newheight / newratio;
+
+                                theImage.height = newnewheight;
+                                theImage.width = newnewwidth;
+                            }
+                        }
+                    }
+
+                    $image.css({
+                        'width': theImage.width + 'px',
+                        'height': theImage.height + 'px',
+                        'margin-left': -theImage.width / 2 + 'px',
+                        'margin-top': -theImage.height / 2 + 'px'
+                    });
+                };
+
+            return {init: init};
+        })();
+
+        ImageWall.init();
+    });
 </script>
 </body>
 </html>
